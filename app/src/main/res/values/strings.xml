@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">СalorieСounter</string>
+    <string name="breakfast">Завтрак</string>
+    <string name="lunch">Обед</string>
+    <string name="dinner">Ужин</string>
 </resources>
