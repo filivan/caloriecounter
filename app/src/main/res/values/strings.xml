@@ -3,4 +3,9 @@
     <string name="breakfast">Завтрак</string>
     <string name="lunch">Обед</string>
     <string name="dinner">Ужин</string>
+
+    <string name="drawer_diet">Рацион</string>
+    <string name="drawer_calculator">Калькулятор</string>
+
+
 </resources>
