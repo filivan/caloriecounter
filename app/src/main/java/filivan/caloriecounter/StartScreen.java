@@ -27,11 +27,30 @@ public class StartScreen extends AppCompatActivity {
         setContentView(R.layout.activity_start_screen);
 
         mBreakfast = (Button) findViewById(R.id.button5);
+        mLunch = (Button) findViewById(R.id.button6);
+        mDinner = (Button) findViewById(R.id.button8);
+
 
         mBreakfast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(StartScreen.this, Breakfast.class);
+                startActivity(intent);
+            }
+        });
+
+        mLunch.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (StartScreen.this, Lunch.class);
+                startActivity(intent);
+            }
+        });
+
+        mDinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartScreen.this, Dinner.class);
                 startActivity(intent);
             }
         });
