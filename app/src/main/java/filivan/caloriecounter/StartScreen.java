@@ -19,7 +19,8 @@ public class StartScreen extends AppCompatActivity {
 
     private Drawer.Result drawerResult = null;
     private Button mBreakfast;
-
+    private Button mLunch;
+    private Button mDinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
