@@ -1,11 +1,13 @@
 package filivan.caloriecounter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
@@ -16,11 +18,22 @@ import java.util.Objects;
 public class StartScreen extends AppCompatActivity {
 
     private Drawer.Result drawerResult = null;
+    private Button mBreakfast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
+
+        mBreakfast = (Button) findViewById(R.id.button5);
+
+        mBreakfast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartScreen.this, Breakfast.class);
+                startActivity(intent);
+            }
+        });
 
         // Инициализируем Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -55,6 +68,7 @@ public class StartScreen extends AppCompatActivity {
                     }
                 })
                 .build();
+
     }
 
     @Override
@@ -64,7 +78,7 @@ public class StartScreen extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
-    }
 
+    }
 
 }
