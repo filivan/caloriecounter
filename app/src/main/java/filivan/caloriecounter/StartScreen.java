@@ -76,8 +76,9 @@ public class StartScreen extends AppCompatActivity {
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(R.string.drawer_diet).withIcon(R.mipmap.diet),
                         new PrimaryDrawerItem().withName(R.string.drawer_calculator).withIcon(R.mipmap.calculator),
-                        new PrimaryDrawerItem().withName(R.string.drawer_settings).withIcon(R.mipmap.settings),
-                        new PrimaryDrawerItem().withName(R.string.drawer_statistics).withIcon(R.mipmap.statistics)
+                        new PrimaryDrawerItem().withName(R.string.drawer_statistics).withIcon(R.mipmap.statistics),
+                        new PrimaryDrawerItem().withName(R.string.drawer_settings).withIcon(R.mipmap.settings)
+
                 )
                 .withOnDrawerListener(new Drawer.OnDrawerListener() {
                     @Override
@@ -102,19 +103,16 @@ public class StartScreen extends AppCompatActivity {
                         switch (position) {
 
                             case 0:
-                                startActivity(new Intent(StartScreen.this, Breakfast.class));
+                                startActivity(new Intent(StartScreen.this, StartScreen.class));
                                 break;
                             case 1:
-                                startActivity(new Intent(StartScreen.this, Breakfast.class));
+                                startActivity(new Intent(StartScreen.this, Calculator.class));
                                 break;
                             case 2:
-                                startActivity(new Intent(StartScreen.this, Lunch.class));
+                                startActivity(new Intent(StartScreen.this, Statistics.class));
                                 break;
                             case 3:
-                                startActivity(new Intent(StartScreen.this, Dinner.class));
-                                break;
-                            case 4:
-                                startActivity(new Intent(StartScreen.this, Dinner.class));
+                                startActivity(new Intent(StartScreen.this, Settings.class));
                                 break;
                         }
 
