@@ -7,12 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.Button;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 import java.util.Objects;
+
+
 
 
 public class StartScreen extends AppCompatActivity {
@@ -21,6 +26,8 @@ public class StartScreen extends AppCompatActivity {
     private Button mBreakfast;
     private Button mLunch;
     private Button mDinner;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +96,26 @@ public class StartScreen extends AppCompatActivity {
                     public void onDrawerSlide(View drawerView, float slideOffset) {
                     }
                 })
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
+                        switch (position) {
+
+                            case 0:
+                                startActivity(new Intent(StartScreen.this, Breakfast.class));
+                                break;
+                            case 1:
+                                startActivity(new Intent(StartScreen.this, Breakfast.class));
+                                break;
+                            case 2:
+                                startActivity(new Intent(StartScreen.this, Lunch.class));
+                                break;
+                            case 3:
+                                startActivity(new Intent(StartScreen.this, Dinner.class));
+                                break;
+                        }
+                    }
+                })
                 .build();
 
     }
@@ -100,7 +127,6 @@ public class StartScreen extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
-
     }
 
 }
