@@ -68,7 +68,9 @@ public class StartScreen extends AppCompatActivity {
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(R.string.drawer_diet).withIcon(R.mipmap.diet),
-                        new PrimaryDrawerItem().withName(R.string.drawer_calculator).withIcon(R.mipmap.calculator)
+                        new PrimaryDrawerItem().withName(R.string.drawer_calculator).withIcon(R.mipmap.calculator),
+                        new PrimaryDrawerItem().withName(R.string.settings).withIcon(R.mipmap.settings),
+                        new PrimaryDrawerItem().withName(R.string.statistics).withIcon(R.mipmap.statistics)
                 )
                 .withOnDrawerListener(new Drawer.OnDrawerListener() {
                     @Override
