@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".Calculator" />
         <activity
             android:name=".Dinner"
             android:screenOrientation="portrait">
@@ -19,7 +20,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Lunch"
             android:screenOrientation="portrait">
@@ -29,7 +29,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Breakfast"
             android:screenOrientation="portrait">
@@ -39,7 +38,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".StartScreen"
             android:screenOrientation="portrait">
@@ -49,7 +47,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -60,7 +57,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
