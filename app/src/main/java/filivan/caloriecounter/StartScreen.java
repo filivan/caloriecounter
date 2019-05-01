@@ -113,7 +113,11 @@ public class StartScreen extends AppCompatActivity {
                             case 3:
                                 startActivity(new Intent(StartScreen.this, Dinner.class));
                                 break;
+                            case 4:
+                                startActivity(new Intent(StartScreen.this, Dinner.class));
+                                break;
                         }
+
                     }
                 })
                 .build();
