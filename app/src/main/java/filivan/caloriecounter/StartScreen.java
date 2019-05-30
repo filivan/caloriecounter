@@ -13,11 +13,8 @@ import android.widget.Button;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 import java.util.Objects;
-
-
 
 
 public class StartScreen extends AppCompatActivity {
@@ -27,7 +24,6 @@ public class StartScreen extends AppCompatActivity {
     private Button mLunch;
     private Button mDinner;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +32,6 @@ public class StartScreen extends AppCompatActivity {
         mBreakfast = (Button) findViewById(R.id.button5);
         mLunch = (Button) findViewById(R.id.button6);
         mDinner = (Button) findViewById(R.id.button8);
-
 
         mBreakfast.setOnClickListener(new View.OnClickListener() {
             @Override
