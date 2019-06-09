@@ -3,7 +3,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/food"></bitmap>
+            android:src="@mipmap/splash_screen"></bitmap>
     </item>
 
 </layer-list>

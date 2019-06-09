@@ -5,4 +5,4 @@
     android:adjustViewBounds="true"
     android:orientation="vertical"
     android:scaleType="fitCenter"
-    android:src="@mipmap/header"/>
+    android:src="@mipmap/toolbar_picture"/>
