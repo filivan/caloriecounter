@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#ffffff"
     tools:context=".Breakfast">
 
 
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/search_bar"
+        android:layout_alignParentTop="true"
+        app:mt_speechMode="false"
+        app:mt_hint="Search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:layout_width="330dp"
-            android:layout_height="50dp"
-            android:background="@drawable/breakfast_icon"
-            android:layout_gravity="start"
-            android:text="@string/breakfast"
-            android:textSize="40sp"
-            android:textColor="#007e00"
-            android:translationY="70dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_search"
+        android:layout_below="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="end"
-        android:clickable="true"
-        android:translationY="15dp"
-        app:backgroundTint="#ffffff"
-        app:fabCustomSize="60dp"
-        app:maxImageSize="50dp"
-        app:srcCompat="@android:drawable/ic_input_add" />
-
-
-</LinearLayout>
+</RelativeLayout>
